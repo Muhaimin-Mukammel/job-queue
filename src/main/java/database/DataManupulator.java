@@ -5,15 +5,17 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import java.io.IOException;
 import java.util.TreeMap;
 
-
 public class DataManupulator {
+
      private final TaskGroup database;
-     public DataManupulator(TaskGroup database){
-         this.database = database;
-     }
      private TreeMap<Integer, TaskGroup> data = new TreeMap<>();
      private Task task = new Task();
-     public void load() throws IOException {
+
+     public DataManupulator(TaskGroup database){
+        this.database = database;
+    }
+
+    public void load() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 
         if(database.getFile().exists() && database.getFile().length() > 0){
@@ -22,6 +24,7 @@ public class DataManupulator {
             System.out.println("File do not exists!!!");
         }
     }
+
     public TreeMap<Integer, TaskGroup> getData(){
          return this.data;
     }

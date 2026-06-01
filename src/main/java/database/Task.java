@@ -1,6 +1,7 @@
 package database;
 
 public class Task{
+
     private int id;
     private int taskno;
     private String type;

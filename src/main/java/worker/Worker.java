@@ -6,6 +6,7 @@ import database.Task;
 import java.util.concurrent.BlockingQueue;
 
 public class Worker implements Runnable{
+
     private final BlockingQueue<Task> queue;
     private final TaskGroup database;
 
@@ -13,6 +14,7 @@ public class Worker implements Runnable{
         this.queue = queue;
         this.database = database;
     }
+
     @Override
     public void run() {
         Processor processor = new Processor();

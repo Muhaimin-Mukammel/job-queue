@@ -30,6 +30,4 @@ public class Stateupgrader {
         mapper.writerWithDefaultPrettyPrinter()
                 .writeValue(file, data);
     }
-
-
 }
