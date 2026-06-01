@@ -8,10 +8,13 @@ import java.util.List;
 
 
 public class DataManupulator {
-     Database database = new Database();
+     private final Database database;
+     public DataManupulator(Database database){
+         this.database = database;
+     }
      private TreeMap<Integer, Database> data = new TreeMap<>();
      private Task task = new Task();
-     public void main(String[] args) throws IOException {
+     public void load() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 
         if(database.getFile().exists() && database.getFile().length() > 0){
@@ -21,14 +24,11 @@ public class DataManupulator {
         }
     }
     public TreeMap<Integer, Database> getData(){
-         return this.data = data;
+         return this.data;
     }
     public Task manupulatedata(int id){
-        database = data.get(id);
-        return task = (Task) database.getTask();
-    }
-    public Task gettask(){
-         return this.task;
-    }
+        Database db = data.get(id);
 
+
+    }
 }

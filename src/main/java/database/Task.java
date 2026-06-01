@@ -1,18 +1,23 @@
 package database;
 
 public class Task{
+    private int id;
     private int taskno;
     private String type;
     private String work;
 
     public Task (){};
-    public Task(int taskno, String type, String work){
+    public Task(int id, int taskno, String type, String work){
+        this.id = id;
         this.taskno = taskno;
         this.type = type;
         this.work = work;
     }
 
     // Getters
+    public int getid(){
+        return this.id;
+    }
     public int getTaskno(){
         return this.taskno;
     }
@@ -24,6 +29,9 @@ public class Task{
     }
 
     // Setters
+    public void setId(int id){
+        this.id = id;
+    }
     public void setTaskno(int taskno){
         this.taskno = taskno;
     }

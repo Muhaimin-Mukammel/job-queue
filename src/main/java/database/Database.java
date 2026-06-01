@@ -32,7 +32,7 @@ public class Database {
         return this.name;
     }
     public List<Task> getTask(){
-        return this.task = task;
+        return this.task;
     }
     public String getStatus(){
         return this.status;
@@ -49,8 +49,9 @@ public class Database {
     public void setTask(List<Task> task){
         this.task = task;
     }
-    public void setStatus(String status){
+    public void setStatus(String status, int id){
         this.status = status;
+        this.id = id;
     }
 
 
