@@ -5,6 +5,7 @@ public class Task{
     private String type;
     private String work;
 
+    public Task (){};
     public Task(int taskno, String type, String work){
         this.taskno = taskno;
         this.type = type;
