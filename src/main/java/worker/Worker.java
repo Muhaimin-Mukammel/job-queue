@@ -1,23 +1,36 @@
 package worker;
 
-import database.Database;
+import database.TaskGroup;
+import database.Stateupgrader;
 import database.Task;
 import java.util.concurrent.BlockingQueue;
 
 public class Worker implements Runnable{
     private final BlockingQueue<Task> queue;
-    private final Database database;
+    private final TaskGroup database;
 
-    public Worker(BlockingQueue<Task> queue, Database database){
+    public Worker(BlockingQueue<Task> queue, TaskGroup database){
         this.queue = queue;
         this.database = database;
     }
     @Override
-    public void run(){
-        while(queue.size() > 0){
+    public void run() {
+        Processor processor = new Processor();
+        Stateupgrader stateupgrader = new Stateupgrader();
+        while(true){
             try {
                 Task task = queue.take();
-                database.setStatus("completed", task.getid());
+                try{
+                    stateupgrader.upgrade(database.getFile(), task.getid(), "WORKING");
+                } catch ( Exception e){
+                    e.printStackTrace();
+                }
+                processor.WorkProcessor();
+                try{
+                    stateupgrader.upgrade(database.getFile(), task.getid(), "COMPLETED");
+                } catch ( Exception e){
+                    e.printStackTrace();
+                }
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }

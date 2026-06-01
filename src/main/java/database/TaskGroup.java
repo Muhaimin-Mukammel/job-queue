@@ -4,11 +4,11 @@ import java.io.File;
 import java.util.List;
 
 
-public class Database {
+public class TaskGroup {
     File file = new File("src\\main\\java\\database\\storage.json");
 
     public File getFile(){
-        return this.file = file;
+        return this.file;
     }
     private int id;
     private String name;
@@ -16,8 +16,8 @@ public class Database {
     private String status;
 
 
-    public Database(){};
-    public Database (int id, String name,List<Task> task ,String status){
+    public TaskGroup(){};
+    public TaskGroup(int id, String name, List<Task> task , String status){
         this.id = id;
         this.name = name;
         this.task = task;
@@ -49,9 +49,8 @@ public class Database {
     public void setTask(List<Task> task){
         this.task = task;
     }
-    public void setStatus(String status, int id){
+    public void setStatus(String status){
         this.status = status;
-        this.id = id;
     }
 
 

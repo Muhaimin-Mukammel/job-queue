@@ -7,9 +7,9 @@ import java.util.TreeMap;
 import java.util.concurrent.BlockingQueue;
 
 public class JobAdder {
-    private final Database database;
+    private final TaskGroup database;
     private final BlockingQueue<Task> queue;
-    public JobAdder(Database database, BlockingQueue<Task> queue){
+    public JobAdder(TaskGroup database, BlockingQueue<Task> queue){
         this.database = database;
         this.queue = queue;
     }
@@ -17,19 +17,19 @@ public class JobAdder {
     volatile boolean running = true;
     public void init(){
         DataManupulator manupulate = new DataManupulator(database);
-        TreeMap<Integer, Database> data = manupulate.getData();
+        TreeMap<Integer, TaskGroup> data = manupulate.getData();
         int id = database.getId();
         int taskid = 1;
         while (data.containsKey(id) &&  running){
-            Database db = data.get(id);
+            TaskGroup db = data.get(id);
             if(db != null){
                 taskid = 1;
                 List<Task> TASK = database.getTask();
-                while (taskid < TASK.size()){
+                while (taskid <= TASK.size()){
                     queue.offer(TASK.get(taskid));
                     taskid++;
                 }
-                database.setStatus("Pending", id);
+                database.setStatus("PENDING");
             }else{
                 System.out.println("task is null in JobAdder ( line 19 )");
             }
