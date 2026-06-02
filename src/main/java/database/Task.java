@@ -7,6 +7,7 @@ public class Task{
     private String type;
     private String work;
 
+    // Constructors
     public Task (){};
     public Task(int id, int taskno, String type, String work){
         this.id = id;

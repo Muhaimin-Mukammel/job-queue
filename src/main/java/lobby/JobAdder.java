@@ -1,7 +1,6 @@
 package lobby;
 
 import database.*;
-
 import java.io.IOException;
 import java.util.List;
 import java.util.TreeMap;
@@ -9,10 +8,9 @@ import java.util.concurrent.BlockingQueue;
 
 public class JobAdder {
     private final TaskGroup database;
-    private final BlockingQueue<Task> queue;
-    public JobAdder(TaskGroup database, BlockingQueue<Task> queue){
+    private BlockingQueue<Task> queue;
+    public JobAdder(TaskGroup database){
         this.database = database;
-        this.queue = queue;
     }
 
     volatile boolean running = true;

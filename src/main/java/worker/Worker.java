@@ -10,6 +10,7 @@ public class Worker implements Runnable{
     private final BlockingQueue<Task> queue;
     private final TaskGroup database;
 
+    // Constructors
     public Worker(BlockingQueue<Task> queue, TaskGroup database){
         this.queue = queue;
         this.database = database;
@@ -17,8 +18,10 @@ public class Worker implements Runnable{
 
     @Override
     public void run() {
-        Processor processor = new Processor();
+
+        Processor processor = new Processor(queue);
         Stateupgrader stateupgrader = new Stateupgrader();
+
         while(true){
             try {
                 Task task = queue.take();
@@ -27,7 +30,7 @@ public class Worker implements Runnable{
                 } catch ( Exception e){
                     e.printStackTrace();
                 }
-                processor.WorkProcessor();
+                processor.workProcessor(); // Processing work
                 try{
                     stateupgrader.upgrade(database.getFile(), task.getid(), "COMPLETED");
                 } catch ( Exception e){

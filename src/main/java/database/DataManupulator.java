@@ -8,12 +8,13 @@ import java.util.TreeMap;
 public class DataManupulator {
 
      private final TaskGroup database;
-     private TreeMap<Integer, TaskGroup> data = new TreeMap<>();
-     private Task task = new Task();
 
+     // Constructor
      public DataManupulator(TaskGroup database){
         this.database = database;
     }
+
+    private TreeMap<Integer, TaskGroup> data = new TreeMap<>();
 
     public void load() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
