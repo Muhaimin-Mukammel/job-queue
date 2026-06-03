@@ -1,0 +1,57 @@
+package worker;
+
+import database.Task;
+import database.TaskGroup;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.BlockingQueue;
+
+public class ThreadPool {
+    private final BlockingQueue<Task> queue;
+    private final TaskGroup database;
+    // Constructors
+    public ThreadPool(BlockingQueue<Task> queue, TaskGroup database){
+        this.queue = queue;
+        this.database = database;
+    }
+
+    private final List<Thread> workers = new ArrayList<>();
+    private final List<Worker> workerObject = new ArrayList<>();
+
+    public void startThreadpool(int NumberOfWorker){
+        if(workers.isEmpty() == false){
+            throw new IllegalStateException("Thread pool is already running");
+        }
+        for ( int i = 0 ; i < NumberOfWorker; i++){
+
+            Worker worker = new Worker(queue, database);
+            Thread thread = new Thread(worker);
+            workerObject.add(worker);
+            workers.add(thread);
+            thread.start();
+        }
+    }
+
+    public void shutdownThreadpool(){
+        for(Worker worker : workerObject){
+            worker.stop();
+        }
+
+        for (Thread worker : workers){
+            worker.interrupt();
+        }
+
+        for( Thread worker : workers){
+            try {
+                worker.join();
+            }catch (InterruptedException e){
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        workerObject.clear();
+        workers.clear();
+    }
+
+
+}

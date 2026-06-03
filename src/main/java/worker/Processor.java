@@ -12,8 +12,8 @@ public class Processor {
         this.queue = queue;
     }
 
-    public void workProcessor() throws InterruptedException {
-        Task task = queue.take();
+    public void workProcessor(Task task) throws InterruptedException {
             task.setWork("COMPLETED");
+            Thread.sleep(100);
     }
 }

@@ -7,6 +7,8 @@ import java.util.concurrent.BlockingQueue;
 
 public class Worker implements Runnable{
 
+    private volatile boolean running = true;
+
     private final BlockingQueue<Task> queue;
     private final TaskGroup database;
 
@@ -30,16 +32,23 @@ public class Worker implements Runnable{
                 } catch ( Exception e){
                     e.printStackTrace();
                 }
-                processor.workProcessor(); // Processing work
+                processor.workProcessor(task); // Processing work
                 try{
                     stateupgrader.upgrade(database.getFile(), task.getid(), "COMPLETED");
                 } catch ( Exception e){
                     e.printStackTrace();
                 }
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                Thread.currentThread().interrupt();
+                if(!running){
+                    break;
+                }
             }
         }
+    }
+
+    public void stop(){
+        this.running = false;
     }
 
 }
