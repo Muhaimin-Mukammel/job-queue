@@ -3,19 +3,21 @@ package worker;
 import database.TaskGroup;
 import database.Stateupgrader;
 import database.Task;
+import lobby.Job;
+
 import java.util.concurrent.BlockingQueue;
 
 public class Worker implements Runnable{
 
-    private volatile boolean running = true;
-
-    private final BlockingQueue<Task> queue;
+    private final BlockingQueue<Job> queue;
     private final TaskGroup database;
+    private final Task TASK;
 
     // Constructors
-    public Worker(BlockingQueue<Task> queue, TaskGroup database){
+    public Worker(BlockingQueue<Job> queue, TaskGroup database, Task TASK){
         this.queue = queue;
         this.database = database;
+        this.TASK = TASK;
     }
 
     @Override
@@ -24,31 +26,22 @@ public class Worker implements Runnable{
         Processor processor = new Processor(queue);
         Stateupgrader stateupgrader = new Stateupgrader();
 
-        while(true){
+        while (!Thread.currentThread().isInterrupted()) {
             try {
-                Task task = queue.take();
+                Job job = queue.take();
+                int id = job.getTaskid();
+                Task task = job.getTask();
                 try{
-                    stateupgrader.upgrade(database.getFile(), task.getid(), "WORKING");
-                } catch ( Exception e){
-                    e.printStackTrace();
-                }
-                processor.workProcessor(task); // Processing work
-                try{
-                    stateupgrader.upgrade(database.getFile(), task.getid(), "COMPLETED");
-                } catch ( Exception e){
+                    stateupgrader.upgrade(database.getFile(), id ,TASK.getTaskno() ,"WORKING");
+                    processor.workProcessor(job);
+                    stateupgrader.upgrade(database.getFile(), id ,task.getTaskno() ,"COMPLETED");
+                }catch (Exception e){
                     e.printStackTrace();
                 }
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                if(!running){
-                    break;
-                }
+                break;
             }
         }
     }
-
-    public void stop(){
-        this.running = false;
-    }
-
 }

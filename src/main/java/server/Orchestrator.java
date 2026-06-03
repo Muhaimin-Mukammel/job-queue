@@ -2,6 +2,7 @@ package server;
 
 import database.Task;
 import database.TaskGroup;
+import lobby.Job;
 import lobby.JobAdder;
 import lobby.Lobby;
 import worker.WorkerManager;
@@ -16,27 +17,39 @@ public class Orchestrator {
 
     private final TaskGroup database;
     private final int workercount;
-    public Orchestrator(TaskGroup database, int workercount){
+    private final Task TASK;
+
+    public Orchestrator(TaskGroup database, int workercount, Task TASK){
         this.database = database;
         this.workercount = workercount;
+        this.TASK = TASK;
     }
 
     // Scheduled Executor Service
     private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 
-    public void start(int RunTimeInSecond) throws IOException {
+    public void start(int RunTimeInSecond) throws IOException, InterruptedException {
         Lobby lobby = new Lobby();
+
         JobAdder jobAdder = new JobAdder(database);
-        jobAdder.init();
-        BlockingQueue<Task> queue = jobAdder.getQueue();
-        WorkerManager workerManager = new WorkerManager(queue, database, workercount);
+
+        BlockingQueue<Job> queue = jobAdder.getQueue();
+        WorkerManager workerManager = new WorkerManager(queue, database, workercount, TASK);
         workerManager.startWorkerManager();
+
+        Thread Ja = new Thread(jobAdder);
+        Ja.start();
+
 
 
         scheduler.schedule(() -> {
-            lobby.shutdown();
+            jobAdder.shutdown();
+
             workerManager.shutDownworkers();
+
             scheduler.shutdown();
         }, RunTimeInSecond, TimeUnit.SECONDS);
+
+        Ja.join();
     }
 }

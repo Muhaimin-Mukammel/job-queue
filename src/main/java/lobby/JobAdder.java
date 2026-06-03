@@ -3,44 +3,70 @@ package lobby;
 import database.*;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
-public class JobAdder {
+public class JobAdder implements Runnable{
     private final TaskGroup database;
-    private BlockingQueue<Task> queue;
+    private BlockingQueue<Job> queue = new LinkedBlockingQueue<>();
+
+    private volatile boolean isRunning = true;
+
     public JobAdder(TaskGroup database){
         this.database = database;
     }
 
-    volatile boolean running = true;
-    public void init() throws IOException {
+    @Override
+    public void run() {
         DataManupulator manupulate = new DataManupulator(database);
-        manupulate.load();
+        try {
+            manupulate.load();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
         TreeMap<Integer, TaskGroup> data = manupulate.getData();
-        int id = database.getId();
-        int taskid = 0;
-        while (data.containsKey(id) &&  running){
-            TaskGroup db = data.get(id);
-            if(db != null){
-                taskid = 0;
-                List<Task> TASK = database.getTask();
-                while (taskid < TASK.size()){
-                    queue.offer(TASK.get(taskid));
-                    taskid++;
-                }
-                database.setStatus("PENDING");
-            }else{
-                System.out.println("task is null in JobAdder ( line 19 )");
+        for ( Map.Entry<Integer, TaskGroup> entry : data.entrySet()){
+            if(isRunning == false){
+                break;
             }
-            id++;
+
+            int groupid = entry.getKey();
+            TaskGroup group = entry.getValue();
+
+            List<Task> tasks = group.getTask();
+
+            if(tasks == null){
+                continue;
+            }
+
+            for( Task t : tasks){
+                if(isRunning == false || Thread.currentThread().isInterrupted()){
+                    break;
+                }
+                try {
+                    queue.put(new Job(groupid, t));
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    return;
+                }
+            }
         }
     }
-    public BlockingQueue<Task> getQueue(){
+    public BlockingQueue<Job> getQueue(){
         return this.queue;
     }
+    private Thread thread;
+    public void setThread(Thread thread){
+        this.thread  = thread;
+    }
     public void shutdown(){
-        running = false;
+        isRunning = false ;
+
+        if(thread != null){
+            thread.interrupt();
+        }
     }
 }
 

@@ -14,15 +14,13 @@ public class TaskGroup {
     private int id;
     private String name;
     private List<Task> task;
-    private String status;
 
     // Constructors
     public TaskGroup(){};
-    public TaskGroup(int id, String name, List<Task> task , String status){
+    public TaskGroup(int id, String name, List<Task> task){
         this.id = id;
         this.name = name;
         this.task = task;
-        this.status = status;
     }
 
     // Getters
@@ -35,10 +33,6 @@ public class TaskGroup {
     public List<Task> getTask(){
         return this.task;
     }
-    public String getStatus(){
-        return this.status;
-    }
-
 
     // Setters
     public void setId(int id){
@@ -50,12 +44,6 @@ public class TaskGroup {
     public void setTask(List<Task> task){
         this.task = task;
     }
-    public void setStatus(String status){
-        this.status = status;
-    }
-
-
-
 
 }
 

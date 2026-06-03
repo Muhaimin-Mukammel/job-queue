@@ -2,24 +2,22 @@ package database;
 
 public class Task{
 
-    private int id;
+
     private int taskno;
     private String type;
     private String work;
+    private String status;
 
     // Constructors
     public Task (){};
-    public Task(int id, int taskno, String type, String work){
-        this.id = id;
+    public Task(int taskno, String type, String work, String status){
         this.taskno = taskno;
         this.type = type;
         this.work = work;
+        this.status = status;
     }
 
     // Getters
-    public int getid(){
-        return this.id;
-    }
     public int getTaskno(){
         return this.taskno;
     }
@@ -29,11 +27,11 @@ public class Task{
     public String getWork(){
         return this.work;
     }
+    public String getStatus(){
+        return this.status;
+    }
 
     // Setters
-    public void setId(int id){
-        this.id = id;
-    }
     public void setTaskno(int taskno){
         this.taskno = taskno;
     }
@@ -42,5 +40,8 @@ public class Task{
     }
     public void setWork(String work){
         this.work = work;
+    }
+    public void setStatus(String status){
+        this.status = status;
     }
 }

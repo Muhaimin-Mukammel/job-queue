@@ -2,17 +2,21 @@ package worker;
 
 import database.Task;
 import database.TaskGroup;
+import lobby.Job;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
 
 public class ThreadPool {
-    private final BlockingQueue<Task> queue;
+    private final BlockingQueue<Job> queue;
     private final TaskGroup database;
+    private final Task TASK;
     // Constructors
-    public ThreadPool(BlockingQueue<Task> queue, TaskGroup database){
+    public ThreadPool(BlockingQueue<Job> queue, TaskGroup database, Task TASK){
         this.queue = queue;
         this.database = database;
+        this.TASK = TASK;
     }
 
     private final List<Thread> workers = new ArrayList<>();
@@ -22,9 +26,8 @@ public class ThreadPool {
         if(workers.isEmpty() == false){
             throw new IllegalStateException("Thread pool is already running");
         }
-        for ( int i = 0 ; i < NumberOfWorker; i++){
-
-            Worker worker = new Worker(queue, database);
+        for ( int i = 1 ; i <= NumberOfWorker; i++){
+            Worker worker = new Worker(queue, database, TASK);
             Thread thread = new Thread(worker);
             workerObject.add(worker);
             workers.add(thread);
@@ -33,10 +36,6 @@ public class ThreadPool {
     }
 
     public void shutdownThreadpool(){
-        for(Worker worker : workerObject){
-            worker.stop();
-        }
-
         for (Thread worker : workers){
             worker.interrupt();
         }

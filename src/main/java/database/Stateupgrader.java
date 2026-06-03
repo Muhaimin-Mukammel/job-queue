@@ -1,30 +1,42 @@
 package database;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.core.type.TypeReference;
-import java.io.File;
-import java.util.TreeMap;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import java.io.File;
 
 public class Stateupgrader {
 
-    private final Object lock = new Object();
+    private static final Object lock = new Object();
 
-    public void upgrade(File file, int id, String state) throws Exception {
+    private static final ObjectMapper mapper = new ObjectMapper();
 
-        ObjectMapper mapper = new ObjectMapper();
-
-        if (!file.exists() || file.length() == 0) {throw new IllegalStateException("DB file missing or empty");}
+    public void upgrade(File file, int id, int taskNo, String state) throws Exception {
 
         synchronized (lock) {
-            TreeMap<Integer, TaskGroup> data = mapper.readValue(file, new TypeReference<TreeMap<Integer, TaskGroup>>() {});
 
-            TaskGroup db = data.get(id);
+            ObjectNode root = (ObjectNode) mapper.readTree(file);
+            if (root == null) return;
 
-            if (db == null) {throw new IllegalArgumentException("No DB entry for id: " + id);}
-            db.setStatus(state);
-
-            mapper.writerWithDefaultPrettyPrinter().writeValue(file, data);
+            JsonNode dbNode = root.get(String.valueOf(id));
+            if (dbNode == null || !dbNode.isObject()) return;
+            ObjectNode node = (ObjectNode) dbNode;
+            JsonNode tasksNode = node.get("task");
+            if (tasksNode == null || !tasksNode.isArray()) return;
+            ArrayNode tasks = (ArrayNode) tasksNode;
+            for (JsonNode t : tasks) {
+                if (!t.isObject()) continue;
+                ObjectNode task = (ObjectNode) t;
+                JsonNode taskNoNode = task.get("taskno");
+                if (taskNoNode == null) continue;
+                if (taskNoNode.asInt() == taskNo) {
+                    task.put("status", state);
+                    break;
+                }
+            }
+            mapper.writerWithDefaultPrettyPrinter().writeValue(file, root);
         }
     }
 }
