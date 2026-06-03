@@ -22,12 +22,11 @@ public class WorkerManager {
         this.threadpool = new ThreadPool(queue, database);
     }
 
-    public void workerManager(){
-
+    public void startWorkerManager(){
         threadpool.startThreadpool(workercount);
     }
 
-    public void shutdownworkers(){
+    public void shutDownworkers(){
         threadpool.shutdownThreadpool();
     }
 
