@@ -2,7 +2,6 @@ package database;
 
 public class Task{
 
-
     private int taskno;
     private String type;
     private String work;

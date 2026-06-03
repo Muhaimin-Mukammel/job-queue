@@ -17,12 +17,10 @@ public class Orchestrator {
 
     private final TaskGroup database;
     private final int workercount;
-    private final Task TASK;
 
-    public Orchestrator(TaskGroup database, int workercount, Task TASK){
+    public Orchestrator(TaskGroup database, int workercount){
         this.database = database;
         this.workercount = workercount;
-        this.TASK = TASK;
     }
 
     // Scheduled Executor Service
@@ -34,7 +32,7 @@ public class Orchestrator {
         JobAdder jobAdder = new JobAdder(database);
 
         BlockingQueue<Job> queue = jobAdder.getQueue();
-        WorkerManager workerManager = new WorkerManager(queue, database, workercount, TASK);
+        WorkerManager workerManager = new WorkerManager(queue, database, workercount);
         workerManager.startWorkerManager();
 
         Thread Ja = new Thread(jobAdder);

@@ -15,7 +15,7 @@ public class DataManupulator {
     }
 
     private TreeMap<Integer, TaskGroup> data = new TreeMap<>();
-
+    // reader
     public void load() throws IOException {
         ObjectMapper mapper = new ObjectMapper();
 

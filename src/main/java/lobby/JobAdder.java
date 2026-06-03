@@ -13,9 +13,14 @@ public class JobAdder implements Runnable{
     private BlockingQueue<Job> queue = new LinkedBlockingQueue<>();
 
     private volatile boolean isRunning = true;
-
+    // Constructor
     public JobAdder(TaskGroup database){
         this.database = database;
+    }
+
+    private Thread thread;
+    public void setThread(Thread thread){
+        this.thread  = thread;
     }
 
     @Override
@@ -56,10 +61,6 @@ public class JobAdder implements Runnable{
     }
     public BlockingQueue<Job> getQueue(){
         return this.queue;
-    }
-    private Thread thread;
-    public void setThread(Thread thread){
-        this.thread  = thread;
     }
     public void shutdown(){
         isRunning = false ;

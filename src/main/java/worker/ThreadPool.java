@@ -11,12 +11,11 @@ import java.util.concurrent.BlockingQueue;
 public class ThreadPool {
     private final BlockingQueue<Job> queue;
     private final TaskGroup database;
-    private final Task TASK;
+
     // Constructors
-    public ThreadPool(BlockingQueue<Job> queue, TaskGroup database, Task TASK){
+    public ThreadPool(BlockingQueue<Job> queue, TaskGroup database){
         this.queue = queue;
         this.database = database;
-        this.TASK = TASK;
     }
 
     private final List<Thread> workers = new ArrayList<>();

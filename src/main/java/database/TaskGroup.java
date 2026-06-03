@@ -5,7 +5,7 @@ import java.util.List;
 
 
 public class TaskGroup {
-
+    // Source of truth
     File file = new File("src\\main\\java\\database\\storage.json");
 
     public File getFile(){

@@ -1,7 +1,6 @@
 package worker;
 
 import database.Stateupgrader;
-import database.Task;
 import lobby.Job;
 
 import java.util.concurrent.BlockingQueue;

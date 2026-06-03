@@ -16,26 +16,36 @@ public class Stateupgrader {
     public void upgrade(File file, int id, int taskNo, String state) throws Exception {
 
         synchronized (lock) {
-
             ObjectNode root = (ObjectNode) mapper.readTree(file);
+
             if (root == null) return;
 
             JsonNode dbNode = root.get(String.valueOf(id));
+
             if (dbNode == null || !dbNode.isObject()) return;
+
             ObjectNode node = (ObjectNode) dbNode;
             JsonNode tasksNode = node.get("task");
+
             if (tasksNode == null || !tasksNode.isArray()) return;
+
             ArrayNode tasks = (ArrayNode) tasksNode;
+
             for (JsonNode t : tasks) {
+
                 if (!t.isObject()) continue;
+
                 ObjectNode task = (ObjectNode) t;
                 JsonNode taskNoNode = task.get("taskno");
+
                 if (taskNoNode == null) continue;
+
                 if (taskNoNode.asInt() == taskNo) {
                     task.put("status", state);
                     break;
                 }
             }
+            //Writer
             mapper.writerWithDefaultPrettyPrinter().writeValue(file, root);
         }
     }
