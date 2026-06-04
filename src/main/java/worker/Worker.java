@@ -10,13 +10,11 @@ public class Worker implements Runnable{
 
     private final BlockingQueue<Job> queue;
     private final TaskGroup database;
-    private final Task TASK;
 
     // Constructors
-    public Worker(BlockingQueue<Job> queue, TaskGroup database, Task TASK){
+    public Worker(BlockingQueue<Job> queue, TaskGroup database){
         this.queue = queue;
         this.database = database;
-        this.TASK = TASK;
     }
 
     @Override
@@ -26,13 +24,13 @@ public class Worker implements Runnable{
 
         while (!Thread.currentThread().isInterrupted()) {
             try {
-                Job job = queue.take();
+                    Job job = queue.take();
 
-                int id = job.getTaskid();
-                Task task = job.getTask();
+                    int id = job.getTaskid();
+                    Task task = job.getTask();
 
                 try{
-                    stateupgrader.upgrade(database.getFile(), id ,TASK.getTaskno() ,"WORKING");
+                    stateupgrader.upgrade(database.getFile(), id ,task.getTaskno() ,"WORKING");
 
                     processor.workProcessor(job);
 

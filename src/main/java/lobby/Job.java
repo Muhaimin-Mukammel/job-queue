@@ -1,8 +1,10 @@
 package lobby;
 
 import database.Task;
+
 // This is the object
 public class Job {
+
     private final int taskid;
     private final Task task;
 

@@ -1,12 +1,9 @@
 package server;
 
-import database.Task;
 import database.TaskGroup;
 import lobby.Job;
 import lobby.JobAdder;
-import lobby.Lobby;
 import worker.WorkerManager;
-
 import java.io.IOException;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
@@ -27,7 +24,6 @@ public class Orchestrator {
     private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 
     public void start(int RunTimeInSecond) throws IOException, InterruptedException {
-        Lobby lobby = new Lobby();
 
         JobAdder jobAdder = new JobAdder(database);
 

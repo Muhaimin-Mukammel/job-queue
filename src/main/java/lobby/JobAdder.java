@@ -19,9 +19,6 @@ public class JobAdder implements Runnable{
     }
 
     private Thread thread;
-    public void setThread(Thread thread){
-        this.thread  = thread;
-    }
 
     @Override
     public void run() {
@@ -70,5 +67,3 @@ public class JobAdder implements Runnable{
         }
     }
 }
-
-

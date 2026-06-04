@@ -161,7 +161,7 @@
       "taskno" : 2,
       "type" : "report",
       "work" : "prepare KPI dashboard",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "12" : {
@@ -171,12 +171,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "verify inventory data",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "resolve complaint",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "13" : {
@@ -186,12 +186,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "strategy planning session",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send meeting minutes",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "14" : {
@@ -201,12 +201,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "create financial summary",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "backup database",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "15" : {
@@ -216,12 +216,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send promotional offer",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "lead qualification",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "16" : {
@@ -231,12 +231,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "training session",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "submit progress report",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "17" : {
@@ -246,12 +246,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "update employee records",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send birthday wishes",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "18" : {
@@ -261,12 +261,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "partner negotiation",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "budget review",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "19" : {
@@ -276,12 +276,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send feedback request",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "analyze survey results",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "20" : {
@@ -291,12 +291,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "migrate old data",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "technical support",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "21" : {
@@ -306,12 +306,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "project kickoff",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "share project timeline",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "22" : {
@@ -321,12 +321,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "prepare audit report",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "validate entries",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "23" : {
@@ -336,12 +336,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send order confirmation",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "delivery follow-up",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "24" : {
@@ -351,12 +351,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "performance review",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "create yearly summary",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "25" : {
@@ -366,12 +366,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "categorize support tickets",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send knowledge base",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "26" : {
@@ -381,12 +381,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "renewal discussion",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "team alignment",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "27" : {
@@ -396,12 +396,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send event invitation",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "event attendance report",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "28" : {
@@ -411,12 +411,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "merge duplicate profiles",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "account reactivation",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "29" : {
@@ -426,12 +426,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "brainstorming session",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send action items",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "30" : {
@@ -441,12 +441,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "risk assessment report",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "update pricing table",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "31" : {
@@ -456,12 +456,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send subscription reminder",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "collect feedback",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "32" : {
@@ -471,12 +471,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "vendor evaluation",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "vendor scorecard",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "33" : {
@@ -486,12 +486,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "export analytics data",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "share analytics summary",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "34" : {
@@ -501,12 +501,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "interview scheduling",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "HR onboarding",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "35" : {
@@ -516,12 +516,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send policy update",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "compliance report",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "36" : {
@@ -531,12 +531,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "reconcile accounts",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "bank follow-up",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "37" : {
@@ -546,12 +546,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "marketing campaign review",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send campaign assets",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "38" : {
@@ -561,12 +561,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "social media performance",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "tag campaign content",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "39" : {
@@ -576,12 +576,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send job offer letter",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "candidate coordination",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "40" : {
@@ -591,12 +591,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "IT system upgrade",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "upgrade status report",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "41" : {
@@ -606,12 +606,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "archive old files",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "notify stakeholders",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "42" : {
@@ -621,12 +621,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "client retention call",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "renewal planning",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "43" : {
@@ -636,12 +636,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send certificate",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "training completion report",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "44" : {
@@ -651,12 +651,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "update CRM records",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "cross-sell opportunity",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "45" : {
@@ -666,12 +666,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "product launch planning",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send launch brief",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "46" : {
@@ -681,12 +681,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "competitor analysis",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "gather market data",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "47" : {
@@ -696,12 +696,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send survey link",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "follow up on survey",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "48" : {
@@ -711,27 +711,27 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "quarterly business review",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "QBR presentation",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "49" : {
     "id" : 49,
-    "name" : "Nahian",
+    "name" : "Nadia Hossain",
     "task" : [ {
       "taskno" : 1,
       "type" : "data",
       "work" : "optimize database queries",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send performance summary",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "50" : {
@@ -741,12 +741,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "final confirmation call",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "project closure meeting",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   }
 }

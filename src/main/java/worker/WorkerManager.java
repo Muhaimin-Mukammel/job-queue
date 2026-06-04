@@ -1,6 +1,5 @@
 package worker;
 
-import database.Task;
 import database.TaskGroup;
 import lobby.Job;
 

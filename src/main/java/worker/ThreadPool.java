@@ -1,9 +1,7 @@
 package worker;
 
-import database.Task;
 import database.TaskGroup;
 import lobby.Job;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
@@ -26,7 +24,7 @@ public class ThreadPool {
             throw new IllegalStateException("Thread pool is already running");
         }
         for ( int i = 1 ; i <= NumberOfWorker; i++){
-            Worker worker = new Worker(queue, database, TASK);
+            Worker worker = new Worker(queue, database);
             Thread thread = new Thread(worker);
             workerObject.add(worker);
             workers.add(thread);
