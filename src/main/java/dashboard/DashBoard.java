@@ -16,8 +16,10 @@ public class DashBoard {
     private final BlockingQueue<Job> queue;
     private final TaskGroup database;
     private final int runtimeinsecond;
-
     private final WorkerManager workerManager;
+
+    private volatile boolean active = true;
+
     public DashBoard(BlockingQueue<Job> queue, TaskGroup database, WorkerManager workerManager, int Runtimeinsecond){
         this.queue = queue;
         this.database = database;
@@ -25,16 +27,20 @@ public class DashBoard {
         this.runtimeinsecond = Runtimeinsecond;
     }
 
-    private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
+    private ScheduledExecutorService scheduler =
+            Executors.newSingleThreadScheduledExecutor();
 
     public void Dashboard(){
 
         System.out.println("===== DASHBOARD =====");
 
         scheduler.scheduleAtFixedRate(() -> {
-            System.out.println("Running Job : " +  workerManager.getworkingjobinfo());
-            System.out.println("Completed jobs : " +  workerManager.getdonejobinfo());
-        }, 0, 1, TimeUnit.SECONDS);
+
+            if(!active) return;
+
+            Log.print("Running Job : " +  workerManager.getworkingjobinfo());
+            Log.print("Completed jobs : " +  workerManager.getdonejobinfo());
+        },  0, 1, TimeUnit.SECONDS);
 
 
 
@@ -45,9 +51,10 @@ public class DashBoard {
                 int work = info.getWork();
                 total += work;
                 String name = info.getName();
-                System.out.println(name + " " + work);
+                Log.print(name + " " + work);
             }
-            System.out.println("Total Job done : " + total);
+            Log.print("Total Job done : " + total);
+            active = false;
             scheduler.shutdown();
         }, runtimeinsecond, TimeUnit.SECONDS);
 

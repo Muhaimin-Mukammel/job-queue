@@ -21,7 +21,7 @@ public class Processor {
         this.stateupgrader = new Stateupgrader(file);
     }
 
-    public void workProcessor(Job task,  File file, int id, int taskid) throws InterruptedException {
+    public void workProcessor(Job task,  File file, String id, int taskid) throws InterruptedException {
 
         try {
             stateupgrader.upgrade(id, taskid, "WORKING");

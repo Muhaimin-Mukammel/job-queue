@@ -1,10 +1,12 @@
 package server;
 
+import CURD.StartCURD;
 import database.TaskGroup;
 import lobby.Job;
 import lobby.JobAdder;
 import worker.WorkerManager;
 import java.io.IOException;
+import java.util.Scanner;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -14,17 +16,22 @@ import dashboard.DashBoard;
 public class Orchestrator {
 
     private final TaskGroup database;
-    private final int workercount;
 
-    public Orchestrator(TaskGroup database, int workercount){
+    public Orchestrator(TaskGroup database){
         this.database = database;
-        this.workercount = workercount;
     }
 
     // Scheduled Executor Service
     private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 
-    public void start(int RunTimeInSecond) throws Exception {
+
+    public void startCURD() throws IOException {
+        StartCURD startCURD = new StartCURD(database);
+        startCURD.STARTCURD();
+    }
+
+
+    public void start(int RunTimeInSecond, int workercount) throws Exception {
 
         JobAdder jobAdder = new JobAdder(database);
         BlockingQueue<Job> queue = jobAdder.getQueue();

@@ -17,7 +17,7 @@ public class Stateupgrader {
         this.file = file;
     }
 
-    public void upgrade(int id, int taskNo, String state) throws Exception {
+    public void upgrade(String id, int taskNo, String state) throws Exception {
         synchronized (lock) {
             // Read the entire file
             ObjectNode root = root = (ObjectNode) mapper.readTree(file);

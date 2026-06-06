@@ -8,12 +8,27 @@ public class Main {
     public static void main(String[] args) throws Exception {
         TaskGroup database = new TaskGroup();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the amount of time that the server should run : ");
-        int run = sc.nextInt();
-        System.out.println("Enter what number of workers should work : ");
-        int workercount = sc.nextInt();
 
-        Orchestrator orchestrator = new Orchestrator(database, workercount);
-        orchestrator.start(run);
+        Orchestrator orchestrator = new Orchestrator(database);
+
+            System.out.println("""
+                    1. JOB Processing.
+                    2. CURD Operations.
+                    """);
+            int key = sc.nextInt();
+            sc.nextLine();
+
+            if (key == 1) {
+                System.out.println("Enter the amount of time that the server should run : ");
+                int run = sc.nextInt();
+                System.out.println("Enter what number of workers should work : ");
+                int workercount = sc.nextInt();
+
+                orchestrator.start(run, workercount);
+            } else if (key == 2) {
+                orchestrator.startCURD();
+            }
+
+
     }
 }

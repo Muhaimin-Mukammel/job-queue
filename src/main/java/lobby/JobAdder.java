@@ -2,6 +2,7 @@ package lobby;
 
 import database.*;
 import java.io.IOException;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -34,12 +35,12 @@ public class JobAdder implements Runnable{
         }catch (IOException e){
             e.printStackTrace();
         }
-        TreeMap<Integer, TaskGroup> data = manupulate.getData();
-        for ( Map.Entry<Integer, TaskGroup> entry : data.entrySet()){
+        LinkedHashMap<String, TaskGroup> data = manupulate.getData();
+        for ( Map.Entry<String, TaskGroup> entry : data.entrySet()){
             if(isRunning == false){
                 break;
             }
-            int id = entry.getKey();
+            String id = entry.getKey();
             TaskGroup group = entry.getValue();
 
             List<Task> tasks = group.getTask();

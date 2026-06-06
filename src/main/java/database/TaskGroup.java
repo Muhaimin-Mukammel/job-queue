@@ -1,5 +1,7 @@
 package database;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.File;
 import java.util.List;
 
@@ -7,24 +9,25 @@ import java.util.List;
 public class TaskGroup {
     // Source of truth
     File file = new File("src\\main\\java\\database\\storage.json");
-
+    @JsonIgnore
     public File getFile(){
         return this.file;
     }
-    private int id;
+
+    private String id;
     private String name;
     private List<Task> task;
 
     // Constructors
     public TaskGroup(){};
-    public TaskGroup(int id, String name, List<Task> task){
+    public TaskGroup(String id, String name, List<Task> task){
         this.id = id;
         this.name = name;
         this.task = task;
     }
 
     // Getters
-    public int getId(){
+    public String getId(){
         return this.id;
     }
     public String getName(){
@@ -35,7 +38,7 @@ public class TaskGroup {
     }
 
     // Setters
-    public void setId(int id){
+    public void setId(String id){
         this.id = id;
     }
     public void setName(String name){

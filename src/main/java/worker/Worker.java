@@ -42,7 +42,7 @@ public class Worker implements Runnable{
 
                     liveInformation.Jobworking();
 
-                    int id = job.getTaskid();
+                    String id = job.getTaskid();
                     Task task = job.getTask();
                     int taskid = task.getTaskno();
                     File file = database.getFile();
