@@ -29,7 +29,7 @@ public class Worker implements Runnable{
     public void run() {
         Processor processor = null;
         try {
-            processor = new Processor(queue, database.getFile());
+            processor = new Processor();
         }
         catch (Exception e) {
             throw new RuntimeException(e);
@@ -50,7 +50,7 @@ public class Worker implements Runnable{
                 try{
                     stateupgrader.upgrade(id ,taskid ,"WORKING");
 
-                    processor.workProcessor(job, file, id, taskid);
+                    processor.workProcessor();
 
                     numberofworkdone += 1;
 

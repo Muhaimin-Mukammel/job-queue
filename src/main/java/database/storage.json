@@ -6,12 +6,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send congratulation email",
-      "status" : "Database"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "call mother",
-      "status" : "Database"
+      "status" : "COMPLETED"
     } ]
   },
   "2" : {
@@ -491,7 +491,7 @@
       "taskno" : 2,
       "type" : "email",
       "work" : "share analytics summary",
-      "status" : "Waiting"
+      "status" : "COMPLETED"
     } ]
   },
   "34" : {
@@ -501,12 +501,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "interview scheduling",
-      "status" : "Waiting"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "HR onboarding",
-      "status" : "Waiting"
+      "status" : "COMPLETED"
     } ]
   },
   "35" : {
@@ -516,7 +516,7 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send policy update",
-      "status" : "Waiting"
+      "status" : "COMPLETED"
     }, {
       "taskno" : 2,
       "type" : "report",
