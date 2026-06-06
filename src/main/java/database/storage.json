@@ -71,7 +71,7 @@
       "taskno" : 2,
       "type" : "email",
       "work" : "share proposal document",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "6" : {
@@ -81,12 +81,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "analyze quarterly performance",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "clean up duplicate records",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "7" : {
@@ -96,12 +96,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send newsletter",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "vendor coordination",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "8" : {
@@ -111,12 +111,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "internal review meeting",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "submit expense report",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "9" : {
@@ -126,12 +126,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "import new leads",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send thank you note",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "10" : {
@@ -141,12 +141,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "customer support follow-up",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "product demo session",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "11" : {
@@ -156,12 +156,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send contract draft",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "prepare KPI dashboard",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "12" : {
@@ -171,12 +171,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "verify inventory data",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "resolve complaint",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "13" : {
@@ -186,12 +186,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "strategy planning session",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send meeting minutes",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "14" : {
@@ -201,12 +201,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "create financial summary",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "backup database",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "15" : {
@@ -216,12 +216,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send promotional offer",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "lead qualification",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "16" : {
@@ -231,12 +231,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "training session",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "submit progress report",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "17" : {
@@ -246,12 +246,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "update employee records",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send birthday wishes",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "18" : {
@@ -261,12 +261,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "partner negotiation",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "budget review",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "19" : {
@@ -276,12 +276,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send feedback request",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "analyze survey results",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "20" : {
@@ -291,12 +291,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "migrate old data",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "technical support",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "21" : {
@@ -306,12 +306,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "project kickoff",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "share project timeline",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "22" : {
@@ -321,12 +321,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "prepare audit report",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "validate entries",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "23" : {
@@ -336,12 +336,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send order confirmation",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "delivery follow-up",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "24" : {
@@ -351,12 +351,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "performance review",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "create yearly summary",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "25" : {
@@ -366,12 +366,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "categorize support tickets",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send knowledge base",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "26" : {
@@ -381,12 +381,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "renewal discussion",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "team alignment",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "27" : {
@@ -396,12 +396,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send event invitation",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "event attendance report",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "28" : {
@@ -411,12 +411,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "merge duplicate profiles",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "account reactivation",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "29" : {
@@ -426,12 +426,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "brainstorming session",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send action items",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "30" : {
@@ -441,12 +441,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "risk assessment report",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "update pricing table",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "31" : {
@@ -456,12 +456,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send subscription reminder",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "collect feedback",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "32" : {
@@ -471,12 +471,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "vendor evaluation",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "vendor scorecard",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "33" : {
@@ -486,12 +486,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "export analytics data",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "share analytics summary",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "34" : {
@@ -501,12 +501,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "interview scheduling",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "HR onboarding",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "35" : {
@@ -516,12 +516,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send policy update",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "compliance report",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "36" : {
@@ -531,12 +531,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "reconcile accounts",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "bank follow-up",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "37" : {
@@ -546,12 +546,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "marketing campaign review",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send campaign assets",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "38" : {
@@ -561,12 +561,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "social media performance",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "tag campaign content",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "39" : {
@@ -576,12 +576,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send job offer letter",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "candidate coordination",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "40" : {
@@ -591,12 +591,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "IT system upgrade",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "upgrade status report",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "41" : {
@@ -606,12 +606,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "archive old files",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "notify stakeholders",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "42" : {
@@ -621,12 +621,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "client retention call",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "renewal planning",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "43" : {
@@ -636,12 +636,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send certificate",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "training completion report",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "44" : {
@@ -651,12 +651,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "update CRM records",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "cross-sell opportunity",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "45" : {
@@ -666,12 +666,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "product launch planning",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send launch brief",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "46" : {
@@ -681,12 +681,12 @@
       "taskno" : 1,
       "type" : "report",
       "work" : "competitor analysis",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "data",
       "work" : "gather market data",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "47" : {
@@ -696,12 +696,12 @@
       "taskno" : 1,
       "type" : "email",
       "work" : "send survey link",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "call",
       "work" : "follow up on survey",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "48" : {
@@ -711,12 +711,12 @@
       "taskno" : 1,
       "type" : "meeting",
       "work" : "quarterly business review",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "report",
       "work" : "QBR presentation",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "49" : {
@@ -726,12 +726,12 @@
       "taskno" : 1,
       "type" : "data",
       "work" : "optimize database queries",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "email",
       "work" : "send performance summary",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   },
   "50" : {
@@ -741,12 +741,12 @@
       "taskno" : 1,
       "type" : "call",
       "work" : "final confirmation call",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     }, {
       "taskno" : 2,
       "type" : "meeting",
       "work" : "project closure meeting",
-      "status" : "COMPLETED"
+      "status" : "Waiting"
     } ]
   }
 }

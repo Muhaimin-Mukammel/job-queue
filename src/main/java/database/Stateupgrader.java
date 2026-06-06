@@ -10,15 +10,17 @@ import java.io.File;
 public class Stateupgrader {
 
     private static final Object lock = new Object();
-
     private static final ObjectMapper mapper = new ObjectMapper();
+    private final File file;
 
-    public void upgrade(File file, int id, int taskNo, String state) throws Exception {
+    public Stateupgrader(File file) throws Exception {
+        this.file = file;
+    }
 
+    public void upgrade(int id, int taskNo, String state) throws Exception {
         synchronized (lock) {
             // Read the entire file
-            ObjectNode root = (ObjectNode) mapper.readTree(file);
-
+            ObjectNode root = root = (ObjectNode) mapper.readTree(file);
             if (root == null) return;
 
             // find the value of the key (id)

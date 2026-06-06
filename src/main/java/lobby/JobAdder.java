@@ -22,6 +22,12 @@ public class JobAdder implements Runnable{
 
     @Override
     public void run() {
+        Stateupgrader stateupgrader;
+        try {
+            stateupgrader = new Stateupgrader(database.getFile());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
         DataManupulator manupulate = new DataManupulator(database);
         try {
             manupulate.load();
@@ -33,25 +39,33 @@ public class JobAdder implements Runnable{
             if(isRunning == false){
                 break;
             }
-
-            int groupid = entry.getKey();
+            int id = entry.getKey();
             TaskGroup group = entry.getValue();
 
             List<Task> tasks = group.getTask();
+
 
             if(tasks == null){
                 continue;
             }
 
-            for( Task t : tasks){
-                if(isRunning == false || Thread.currentThread().isInterrupted()){
+            for( Task t : tasks) {
+                if (isRunning == false || Thread.currentThread().isInterrupted()) {
                     break;
                 }
-                try {
-                    queue.put(new Job(groupid, t));
-                } catch (InterruptedException e) {
-                    Thread.currentThread().interrupt();
-                    return;
+                if ("COMPLETED".equals(t.getStatus())) {
+                    continue;
+                }else {
+                    try {
+                        int taskid = t.getTaskno();
+                        queue.put(new Job(id, t));
+                        stateupgrader.upgrade(id, taskid, "Waiting");
+                    } catch (InterruptedException e) {
+                        Thread.currentThread().interrupt();
+                        return;
+                    } catch (Exception e) {
+                        throw new RuntimeException(e);
+                    }
                 }
             }
         }
@@ -61,7 +75,7 @@ public class JobAdder implements Runnable{
     }
     public void shutdown(){
         isRunning = false ;
-
+        queue.clear();
         if(thread != null){
             thread.interrupt();
         }

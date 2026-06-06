@@ -9,6 +9,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+import dashboard.DashBoard;
 
 public class Orchestrator {
 
@@ -23,10 +24,9 @@ public class Orchestrator {
     // Scheduled Executor Service
     private ScheduledExecutorService scheduler = Executors.newSingleThreadScheduledExecutor();
 
-    public void start(int RunTimeInSecond) throws IOException, InterruptedException {
+    public void start(int RunTimeInSecond) throws Exception {
 
         JobAdder jobAdder = new JobAdder(database);
-
         BlockingQueue<Job> queue = jobAdder.getQueue();
         WorkerManager workerManager = new WorkerManager(queue, database, workercount);
         workerManager.startWorkerManager();
@@ -34,13 +34,13 @@ public class Orchestrator {
         Thread Ja = new Thread(jobAdder);
         Ja.start();
 
-
+        DashBoard dashBoard = new DashBoard(queue, database, workerManager, RunTimeInSecond);
+        dashBoard.Dashboard();
 
         scheduler.schedule(() -> {
             jobAdder.shutdown();
-
             workerManager.shutDownworkers();
-
+            workerManager.clearworker();
             scheduler.shutdown();
         }, RunTimeInSecond, TimeUnit.SECONDS);
 

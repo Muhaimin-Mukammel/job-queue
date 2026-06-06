@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) throws IOException, InterruptedException {
+    public static void main(String[] args) throws Exception {
         TaskGroup database = new TaskGroup();
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the amount of time that the server should run : ");
@@ -14,8 +14,6 @@ public class Main {
         int workercount = sc.nextInt();
 
         Orchestrator orchestrator = new Orchestrator(database, workercount);
-        System.out.println(database);
         orchestrator.start(run);
-
     }
 }
