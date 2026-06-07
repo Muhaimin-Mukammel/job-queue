@@ -326,3 +326,10 @@ Database  ──►  Waiting  ──►  WORKING  ──►  COMPLETED
 ```
 
 Tasks already in `COMPLETED` state are skipped by `JobAdder` and not re-queued.
+
+
+ ## Documents
+ - Strengths → [Docs/Strengths.md](Docs/Strengths.md)
+ - Limitations → [Docs/Limitations.md](Docs/Limitations.md)
+ - Extensions → [Docs/Extensions.md](Docs/Extensions.md)
+ - Architecture → [Docs/Architecture.md](Docs/Architecture.md)
